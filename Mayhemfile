@@ -1,0 +1,10 @@
+project: sptag
+target: sptag
+image: ghcr.io/rnshah9/playground:SPTAG
+testsuite:
+  - file://test
+#t
+cmds:
+  - cmd: ./indexbuilder -i @@ -a BKT -d 2 -f TXT -o /dev/null -v float
+    env:
+      DISABLE_SMOKETEST: '1'
